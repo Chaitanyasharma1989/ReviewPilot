@@ -1,0 +1,3 @@
+com.csharma.reviewpilot.adapter.agent.ChatGPTAgent
+com.csharma.reviewpilot.adapter.agent.GitDuoAgent
+com.csharma.reviewpilot.adapter.agent.CopilotAgent 

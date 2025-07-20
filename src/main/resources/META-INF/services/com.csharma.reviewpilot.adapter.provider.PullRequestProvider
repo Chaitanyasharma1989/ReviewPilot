@@ -1,0 +1,3 @@
+com.csharma.reviewpilot.adapter.provider.GitHubPullRequestProvider
+com.csharma.reviewpilot.adapter.provider.GitLabPullRequestProvider
+com.csharma.reviewpilot.adapter.provider.BitbucketPullRequestProvider 
