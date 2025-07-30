@@ -2,6 +2,44 @@
 
 A Java 21 tool to fetch pull/merge request changes from GitHub, GitLab, or Bitbucket, send them to an AI agent (ChatGPT, GitDuo, Copilot), and get consolidated review comments.
 
+## 🆕 LangChain Modules
+
+We now offer **two modern implementations** with enhanced AI capabilities!
+
+### 🐍 Python LangChain Module
+Check out the [`langchain-module/`](./langchain-module/) directory for:
+
+- 🤖 **Advanced AI Integration**: LangChain framework with 100+ LLM providers
+- 🔍 **Comprehensive Analysis**: Multi-aspect reviews (security, performance, quality)
+- 🛠️ **Rich CLI Experience**: Beautiful terminal interface with progress tracking
+- 📊 **Structured Output**: Detailed metrics and scoring
+- 🔌 **Extensible Architecture**: Easy to add new providers and agents
+
+**Quick Start (Python LangChain)**:
+```bash
+cd langchain-module
+pip install -r requirements.txt
+python main.py review octocat Hello-World 42
+```
+
+### ☕ Java LangChain4j Module
+Check out the [`langchain4j-module/`](./langchain4j-module/) directory for:
+
+- 🤖 **LangChain4j Integration**: Java-native LangChain framework
+- 🔍 **Multi-Provider Support**: GitHub, GitLab, and Bitbucket
+- 🛠️ **Rich CLI Interface**: Beautiful ASCII tables and formatted output
+- 📊 **Structured Analysis**: Code quality, security, and performance metrics
+- 🔌 **Plugin Architecture**: Extensible provider and agent system
+
+**Quick Start (Java LangChain4j)**:
+```bash
+cd langchain4j-module
+mvn clean package
+java -jar target/reviewpilot-langchain4j-1.0.0.jar review octocat Hello-World 42
+```
+
+See the [Python LangChain Module README](./langchain-module/README.md) and [Java LangChain4j Module README](./langchain4j-module/README.md) for detailed comparisons and benefits.
+
 ## Features
 - Adapter-based: Easily switch between source control providers and AI agents
 - Plugin system: Add new providers/agents without changing core code (Java SPI)
@@ -72,4 +110,19 @@ reviewpilot {
 - Add new config keys in `application.conf`
 
 ## License
-MIT 
+MIT
+
+## 🆚 Implementation Comparison
+
+| Aspect | Original Java | Python LangChain | Java LangChain4j |
+|--------|---------------|------------------|------------------|
+| **Language** | Java 21 | Python 3.8+ | Java 21 |
+| **AI Framework** | Direct API calls | LangChain framework | LangChain4j framework |
+| **LLM Support** | OpenAI only | 100+ providers | 100+ providers |
+| **Features** | Basic review | Advanced analysis, memory, tools | Advanced analysis, memory, tools |
+| **CLI Experience** | Basic output | Rich terminal interface | Rich ASCII tables |
+| **Extensibility** | Java SPI | Python plugins | Plugin architecture |
+| **Memory** | None | Conversation memory | Chat memory |
+| **Vector Search** | None | ChromaDB integration | ChromaDB integration |
+
+For detailed comparisons and benefits analysis, see the [Python LangChain Module documentation](./langchain-module/README.md) and [Java LangChain4j Module documentation](./langchain4j-module/README.md). 
