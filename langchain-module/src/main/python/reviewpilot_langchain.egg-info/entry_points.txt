@@ -1,0 +1,2 @@
+[console_scripts]
+reviewpilot-langchain = reviewpilot_langchain.cli:cli
